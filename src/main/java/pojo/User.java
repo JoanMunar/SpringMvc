@@ -1,25 +1,46 @@
 package pojo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by jmunarb on 03/02/17.
+ */
+
 public class User {
 
+    private String password;
+    private String nom;
 
+    private List<Rol> rols = new ArrayList<Rol>();
 
-    String password;
-    String user;
+    public User(String nom,String password) {
+
+        this.nom = nom;
+        this.password = password;
+
+    }
+
+    public User(String nom){
+        this.nom = nom;
+    }
+
+    public User(String nom, List<Rol> rols) {
+        this.nom = nom;
+        this.rols = rols;
+    }
+
 
     public User() {
-
     }
 
-    public User(String user, String password){
-        this.user = user;
-        this.password = password;
+    public String getNom() {
+        return nom;
     }
 
-    public User(String user){
-        this.user = user;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
-
 
     public String getPassword() {
         return password;
@@ -29,12 +50,16 @@ public class User {
         this.password = password;
     }
 
-    public String getUser() {
-        return user;
+
+    public List<Rol> getRols() {
+        return rols;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setRols(List<Rol> rols) {
+        this.rols = rols;
     }
+
 
 }
+
+

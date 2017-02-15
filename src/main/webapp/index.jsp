@@ -1,6 +1,6 @@
 <html>
     <body>
-        <form>
+        <form action="Controller">
           <label>Rol:</label>
           <input type="text" name="rolName"><br><br>
           <label>Descripcio:</label>

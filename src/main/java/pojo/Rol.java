@@ -1,32 +1,56 @@
 package pojo;
+import java.util.List;
 
 /**
  * Created by jmunarb on 03/02/17.
  */
+
 public class Rol {
 
-    String rol;
-    String descripcio;
+    private List<User> llistaUsuaris;
 
-    public Rol(String rol, String desc) {
-        this.rol = rol;
-        this.descripcio = desc;
+    private String nomRol;
+    private String descripcioRol;
+
+    public Rol(String nom, String desc) {
+        this.nomRol = nom;
+        this.descripcioRol = desc;
     }
 
-    public String getRol() {
-        return rol;
+    public Rol(String nom, List<User> userList) {
+        this.nomRol = nom;
+        this.llistaUsuaris = userList;
     }
 
-    public void setRol(String nom) {
-        this.rol = rol;
+    public Rol() {
     }
 
-    public String getDescripcio() {
-        return descripcio;
+    public Rol(String nom) {
+        this.nomRol = nom;
     }
 
-    public void setDescripcio(String descripcio) {
-        this.descripcio = descripcio;
+    public List<User> getLlistaUsuaris() {
+        return llistaUsuaris;
     }
 
+    public String getNomRol() {
+        return nomRol;
+    }
+
+    public void setNomRol(String nomRol) {
+        this.nomRol = nomRol;
+    }
+
+    public void setLlistaUsuaris(List<User> llistaUsuaris) {
+        this.llistaUsuaris = llistaUsuaris;
+    }
+
+    public String getDescripcioRol() {
+        return descripcioRol;
+    }
+
+    public void setDescripcioRol(String descripcioRol) {
+        this.descripcioRol = descripcioRol;
+    }
 }
+
